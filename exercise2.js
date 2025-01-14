@@ -7,6 +7,32 @@
 
 class BankAccount {
   // YOUR CODE HERE
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber
+    this.balance = balance
+  }
+
+  static compareAccounts(account1, account2) {
+    if (account1.balance > account2.balance) {
+      return account1
+    } else if (account1.balance < account2.balance) {
+      return account2
+    } else {
+      return null;
+    }
+  }
+
+  deposit(amount) {
+    this.balance += amount
+  }
+
+  withdraw(amount) {
+    if (this.balance >= amount) {
+      this.balance -= amount
+    } else {
+      console.log(`Your balance is insufficient.`)
+    }
+  }
 }
 
 
