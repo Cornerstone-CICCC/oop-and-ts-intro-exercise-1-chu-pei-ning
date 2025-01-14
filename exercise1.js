@@ -20,7 +20,7 @@ class Car {
 
   setYear(newYear) {
     if (newYear >= this.#year) {
-      this.#year = newYear
+      this.#year = newYear;
     } else {
       console.log(`Year ${newYear} is not valid. The year cannot be updated.`)
     }
